@@ -6,5 +6,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                loaders: ['babel'],
+                exclude: /node_modules/
+            }
+        ]
     }
 };
